@@ -1,0 +1,58 @@
+/* 全体 */
+* {
+    margin: 0; /*メインはデフォルトで余白がある */
+    padding: 0;
+    box-sizing: border-box;    /* paddingをwidth内に含めて計算してくれる */
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+}
+
+/* ヘッダー全体の帯 */
+.main-header {
+    position: sticky;    /*ホーミング式headerになるやつ*/
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;    /* ロゴとメニューを両端に */
+    align-items: center;
+    padding: 20px 5%;
+    border-top: 1px solid #ccc;
+    z-index: 1000;    /* 他の要素より上に表示 */
+} 
+
+/* 横並びのリスト */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;   /* ボタン同士の間隔 */
+}
+
+.nav-links a {
+    text-decoration: none;    /* 全体にかかっている装飾を取り除く */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* ホバーした時のちょっとした演出 */
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+
+/* フッター */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* ヘッダー・ふっだー共通 */
+.main-header,
+.nav-links,
+.nav-links a,
+.site-footer {
+    background-color: white;
+    color: #333;  
+}
